@@ -1,0 +1,33 @@
+   <!-- ================= PAGE 5: RESERVAS VIP ================= -->
+        <div id="page-reservations" class="page-view hidden max-w-4xl mx-auto space-y-10 py-4">
+            
+            <!-- CALENDÁRIO VIP DE DISPONIBILIDADE -->
+            <div id="vip-calendar-section" class="glass-panel p-6 sm:p-8 rounded-3xl border border-sapphire-500/40 space-y-6 shadow-2xl">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-royalDark-800 pb-4">
+                    <div>
+                        <span class="text-[10px] font-bold text-goldAccent-400 uppercase tracking-widest bg-sapphire-500/20 px-3 py-1 rounded-full border border-goldAccent-500/30">
+                            Capacidade Estrita: Máximo 9 Reservas / Dia
+                        </span>
+                        <h3 class="text-2xl font-serif font-bold text-white mt-2">Calendário de Disponibilidade VIP</h3>
+                        <p class="text-xs text-gray-400">Selecione um dia disponível para preencher seu agendamento no salão.</p>
+                    </div>
+
+                    <!-- Legendas de Status -->
+                    <div class="flex flex-wrap items-center gap-2 text-[11px]">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-semibold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Livre (0-3)
+                        </span>
+                        <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30 font-semibold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Vagas Poucas (4-8)
+                        </span>
+                        <span class="px-2.5 py-1 rounded-lg bg-red-500/10 text-red-400 border border-red-500/30 font-semibold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-red-400"></span> Lotado (9/9)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Grid de Vagas -->
+                <div id="calendar-grid-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                    <!-- Dynamic Javascript Calendar -->
+                </div>
+            </div>
