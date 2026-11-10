@@ -1,4 +1,5 @@
-  // AUTENTICAÇÃO E PAINEL ADMINISTRATIVO COM SENHA
+<!-- AUTENTICAÇÃO E PAINEL ADMINISTRATIVO COM SENHA -->
+    <script>
         function requestAdminAccess() {
             if (isAdminAuthenticated) {
                 toggleAdminPanel();
@@ -78,7 +79,7 @@
                                         <span><strong class="text-goldAccent-400">${i.qty || 1}x</strong> ${i.title}</span>
                                         <span class="text-gray-400">R$ ${(i.price * (i.qty || 1)).toFixed(2)}</span>
                                     </div>
-                                me`).join('')}
+                                `).join('')}
                             </div>
                         </div>
                     `).join('');
@@ -107,6 +108,7 @@
 
         function showToast(msg) {
             const toast = document.getElementById('toast');
+            if (!toast) return;
             toast.innerText = msg;
             toast.classList.remove('hidden');
             setTimeout(() => toast.classList.add('hidden'), 3500);
