@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papa's Pitufos | Haute Cuisine & Sapphire Lounge</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Papa's Pitufos | Início</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,761 +11,180 @@
             theme: {
                 extend: {
                     colors: {
-                        royalDark: {
-                            950: '#030712',
-                            900: '#0B132B',
-                            800: '#1C2541',
-                            700: '#2A365B'
-                        },
-                        champagne: {
-                            100: '#FAF8F5',
-                            200: '#F3EDE2',
-                            300: '#E7DC8A',
-                            400: '#D2C1A0'
-                        },
-                        goldAccent: {
-                            300: '#F7E7A9',
-                            400: '#E5C158',
-                            500: '#D4AF37',
-                            600: '#B89228'
-                        },
-                        sapphire: {
-                            300: '#93C5FD',
-                            400: '#60A5FA',
-                            500: '#2563EB',
-                            600: '#1D4ED8',
-                            800: '#1E3A8A',
-                            900: '#0F172A'
-                        }
+                        royalDark: { 950: '#030712', 900: '#0B132B', 800: '#1C2541', 700: '#2A365B' },
+                        champagne: { 100: '#FAF8F5', 200: '#F3EDE2', 300: '#E7DC8A', 400: '#D2C1A0' },
+                        goldAccent: { 300: '#F7E7A9', 400: '#E5C158', 500: '#D4AF37', 600: '#B89228' },
+                        sapphire: { 300: '#93C5FD', 400: '#60A5FA', 500: '#2563EB', 600: '#1D4ED8', 800: '#1E3A8A', 900: '#0F172A' }
                     },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Cinzel', 'Playfair Display', 'serif']
-                    }
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], serif: ['Cinzel', 'Playfair Display', 'serif'] }
                 }
             }
         }
     </script>
-    <!-- FontAwesome 6.5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #030712;
-            color: #F3EDE2;
-            overflow-x: hidden;
-        }
-
-        /* Custom Subtle Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2563EB;
-            border-radius: 9999px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
-
-        /* Luxury Glass & Surface Effects */
-        .glass-panel {
-            background: rgba(11, 19, 43, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(37, 99, 235, 0.25);
-        }
-        .glass-card {
-            background: rgba(28, 37, 65, 0.55);
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(212, 175, 55, 0.45);
-            box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.9);
-        }
-
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Smooth View Fade Transition */
-        .page-view {
-            animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Glow effects */
-        .gold-glow {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
-        }
-        .sapphire-glow {
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: #F3EDE2; }
+        .glass-panel { background: rgba(11, 19, 43, 0.88); backdrop-filter: blur(20px); border: 1px solid rgba(37, 99, 235, 0.25); }
+        .glass-card { background: rgba(28, 37, 65, 0.55); backdrop-filter: blur(14px); border: 1px solid rgba(212, 175, 55, 0.15); }
+        .sapphire-glow { box-shadow: 0 0 30px rgba(37, 99, 235, 0.25); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-sapphire-500 selection:text-white bg-royalDark-950">
 
-    <!-- HEADER / NAVEGAÇÃO -->
-    <header class="sticky top-0 z-40 glass-panel border-b border-sapphire-500/30 px-4 lg:px-12 py-4 transition-all">
+    <!-- HEADER DE NAVEGAÇÃO ENTRE PÁGINAS -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-sapphire-500/30 px-4 lg:px-12 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            
-            <!-- Logo Elegante -->
-            <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-full border border-goldAccent-500/40 flex items-center justify-center bg-royalDark-900 shadow-lg group-hover:border-sapphire-400 group-hover:scale-105 transition-all">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full border border-goldAccent-500/40 flex items-center justify-center bg-royalDark-900 shadow-lg">
                     <i class="fa-solid fa-crown text-goldAccent-400 text-base"></i>
                 </div>
                 <div>
-                    <h1 class="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase">
-                        Papa's Pitufos
-                    </h1>
+                    <h1 class="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase">Papa's Pitufos</h1>
                     <p class="text-[9px] text-sapphire-400 tracking-[0.25em] uppercase font-semibold">Haute Cuisine & Sapphire Lounge</p>
                 </div>
             </a>
 
-            <!-- Menu de 5 Páginas -->
-            <nav class="hidden md:flex items-center gap-1 bg-royalDark-950/90 p-1.5 rounded-full border border-sapphire-500/30 text-xs font-medium tracking-wide shadow-inner">
-                <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all">
-                    Início
-                </button>
-                <button onclick="navigateTo('menu')" id="nav-menu" class="nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all">
-                    Cardápio
-                </button>
-                <button onclick="navigateTo('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all">
-                    A Alquimia
-                </button>
-                <button onclick="navigateTo('events')" id="nav-events" class="nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all">
-                    Experiências
-                </button>
-                <button onclick="navigateTo('reservations')" id="nav-reservations" class="nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all">
-                    Reservas VIP
-                </button>
+            <!-- NAV LINKS -->
+            <nav class="hidden md:flex items-center gap-1 bg-royalDark-950/90 p-1.5 rounded-full border border-sapphire-500/30 text-xs font-medium">
+                <a href="index.html" class="px-4 py-2 rounded-full text-goldAccent-400 bg-sapphire-600/30 border border-goldAccent-500/40 font-bold">Início</a>
+                <a href="cardapio.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Cardápio</a>
+                <a href="alquimia.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">A Alquimia</a>
+                <a href="experiencias.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Experiências</a>
+                <a href="reservas.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Reservas VIP</a>
             </nav>
 
-            <!-- Ações -->
-            <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="requestAdminAccess()" title="Painel de Gestão VIP (Requer Senha)" class="p-2.5 rounded-full bg-royalDark-800 border border-sapphire-500/30 text-sapphire-400 hover:bg-sapphire-600 hover:text-white transition-all flex items-center gap-2 text-xs">
+            <div class="flex items-center gap-2">
+                <button onclick="requestAdminAccess()" class="p-2.5 rounded-full bg-royalDark-800 border border-sapphire-500/30 text-sapphire-400 text-xs flex items-center gap-2">
                     <i class="fa-solid fa-lock text-goldAccent-400"></i>
                     <span class="hidden sm:inline font-semibold">Painel VIP</span>
                 </button>
 
-                <button onclick="toggleCartModal()" class="px-4 py-2.5 rounded-full bg-gradient-to-r from-sapphire-600 via-sapphire-700 to-sapphire-800 border border-goldAccent-500/30 text-white font-bold hover:shadow-lg hover:shadow-sapphire-500/30 transition-all active:scale-95 flex items-center gap-2 text-xs">
+                <button onclick="toggleCartModal()" class="px-4 py-2.5 rounded-full bg-gradient-to-r from-sapphire-600 to-sapphire-800 border border-goldAccent-500/30 text-white font-bold text-xs flex items-center gap-2">
                     <i class="fa-solid fa-wine-glass text-goldAccent-400"></i>
                     <span class="hidden sm:inline">Pedido</span>
-                    <span id="cart-badge-count" class="px-2 py-0.5 rounded-full bg-royalDark-950 text-goldAccent-400 text-[10px] font-black border border-goldAccent-500/40">0</span>
+                    <span id="cart-badge-count" class="px-2 py-0.5 rounded-full bg-royalDark-950 text-goldAccent-400 text-[10px]">0</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- CONTEÚDO DINÂMICO MULTIPÁGINAS -->
-    <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-
-        <!-- ================= PAGE 1: INÍCIO (HOME) ================= -->
-        <div id="page-home" class="page-view space-y-24">
-            <!-- Hero Banner Sofisticado -->
-            <section class="relative min-h-[70vh] flex items-center justify-center py-8">
-                <div class="grid lg:grid-cols-12 gap-12 items-center w-full">
-                    
-                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sapphire-500/10 border border-sapphire-400/30 text-sapphire-400 text-xs font-semibold tracking-widest uppercase">
-                            <i class="fa-solid fa-gem text-[10px] text-goldAccent-400"></i> Haute Cuisine & Mixologia Azul Safira
-                        </div>
-                        
-                        <h1 class="text-4xl sm:text-6xl font-serif font-extrabold tracking-tight text-white leading-[1.15]">
-                            Onde a Alquimia Encanta os Sentidos.
-                        </h1>
-
-                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
-                            Uma experiência gastronômica memorável. Ingredientes raros de origem certificada, preparos moleculares e coquetelaria exclusiva em um ambiente azul safira intimista e refinado.
-                        </p>
-
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                            <button onclick="navigateTo('menu')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sapphire-600 hover:bg-sapphire-500 border border-goldAccent-500/40 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-lg shadow-sapphire-600/30 flex items-center justify-center gap-3">
-                                <i class="fa-solid fa-utensils text-goldAccent-400"></i> Explorar Cardápio Gourmet
-                            </button>
-                            <button onclick="navigateTo('reservations')" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-champagne-100 font-semibold text-xs tracking-wider uppercase hover:bg-royalDark-800 transition-all border border-sapphire-500/30 flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calendar-check text-sapphire-400"></i> Reserva VIP
-                            </button>
-                        </div>
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-24">
+        <!-- Hero Banner -->
+        <section class="relative min-h-[60vh] flex items-center justify-center py-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center w-full">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sapphire-500/10 border border-sapphire-400/30 text-sapphire-400 text-xs font-semibold tracking-widest uppercase">
+                        <i class="fa-solid fa-gem text-[10px] text-goldAccent-400"></i> Haute Cuisine & Mixologia Azul Safira
                     </div>
-
-                    <!-- Imagem de Destaque -->
-                    <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative glass-card rounded-3xl p-4 border border-sapphire-500/40 max-w-md w-full shadow-2xl sapphire-glow">
-                            <div class="relative h-80 rounded-2xl overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Prato Destaque Haute Cuisine" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-royalDark-950/95 via-transparent to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 right-4 text-left">
-                                    <span class="text-[10px] font-bold uppercase tracking-widest text-goldAccent-400">Criação Assinada</span>
-                                    <h3 class="font-serif text-lg font-bold text-white">Tornedor Wagyu A5 ao Poivre Nobre</h3>
-                                </div>
+                    <h1 class="text-4xl sm:text-6xl font-serif font-extrabold tracking-tight text-white leading-[1.15]">Onde a Alquimia Encanta os Sentidos.</h1>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">Uma experiência gastronômica memorável. Ingredientes raros de origem certificada, preparos moleculares e coquetelaria exclusiva.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="cardapio.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sapphire-600 border border-goldAccent-500/40 text-white font-bold text-xs tracking-wider uppercase text-center shadow-lg">Explorar Cardápio Gourmet</a>
+                        <a href="reservas.html" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-champagne-100 font-semibold text-xs tracking-wider uppercase text-center border border-sapphire-500/30">Reserva VIP</a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative glass-card rounded-3xl p-4 border border-sapphire-500/40 max-w-md w-full shadow-2xl sapphire-glow">
+                        <div class="relative h-80 rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Tornedor Wagyu" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-goldAccent-400">Criação Assinada</span>
+                                <h3 class="font-serif text-lg font-bold text-white">Tornedor Wagyu A5 ao Poivre Nobre</h3>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </section>
-
-            <!-- Destaques do Cardápio -->
-            <section class="space-y-8">
-                <div class="flex items-end justify-between border-b border-royalDark-800 pb-4">
-                    <div>
-                        <span class="text-[10px] font-bold tracking-widest text-sapphire-400 uppercase">Seleção do Chef Executivo</span>
-                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Pratos Emblemáticos</h2>
-                    </div>
-                    <button onclick="navigateTo('menu')" class="text-xs text-goldAccent-400 font-semibold hover:underline flex items-center gap-1">
-                        Ver Cardápio Completo <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </button>
-                </div>
-
-                <div id="home-featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- JS Injected -->
-                </div>
-            </section>
-
-            <!-- Avaliações & Reconhecimentos -->
-            <section class="glass-panel rounded-3xl p-8 sm:p-12 text-center space-y-6 border border-sapphire-500/30 gold-glow">
-                <span class="text-xs font-bold uppercase tracking-widest text-goldAccent-400">Crítica Gastronômica Internacional</span>
-                <blockquote class="font-serif text-lg sm:text-2xl text-champagne-200 max-w-3xl mx-auto italic leading-relaxed">
-                    "O Papa's Pitufos redefine a haute cuisine contemporânea com uma atmosfera azul safira inigualável, insumos raríssimos e harmonizações geniais."
-                </blockquote>
-                <p class="text-xs font-semibold text-sapphire-400 uppercase tracking-wider">— Guia Internacional de Gastronomia Fina</p>
-            </section>
-        </div>
-
-    <!-- FOOTER NOBRE -->
-    <footer class="relative z-10 glass-panel border-t border-sapphire-500/30 py-8 text-center text-xs text-gray-400 mt-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© 2026 Papa's Pitufos Haute Cuisine. Todos os direitos reservados.</p>
-            <div class="flex items-center gap-4 text-gray-300">
-                <a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-goldAccent-400 transition-colors">Início</a>
-                <a href="javascript:void(0)" onclick="navigateTo('menu')" class="hover:text-goldAccent-400 transition-colors">Cardápio</a>
-                <a href="javascript:void(0)" onclick="navigateTo('events')" class="hover:text-goldAccent-400 transition-colors">Experiências</a>
-                <a href="javascript:void(0)" onclick="navigateTo('reservations')" class="hover:text-goldAccent-400 transition-colors">Reservas</a>
             </div>
-        </div>
+        </section>
+
+        <!-- Destaques -->
+        <section class="space-y-8">
+            <div class="flex items-end justify-between border-b border-royalDark-800 pb-4">
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-sapphire-400 uppercase">Seleção do Chef Executivo</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Pratos Emblemáticos</h2>
+                </div>
+                <a href="cardapio.html" class="text-xs text-goldAccent-400 font-semibold hover:underline">Ver Cardápio Completo →</a>
+            </div>
+            <div id="home-featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </section>
+    </main>
+
+    <footer class="glass-panel border-t border-sapphire-500/30 py-8 text-center text-xs text-gray-400 mt-12">
+        <p>© 2026 Papa's Pitufos Haute Cuisine. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- DRAWER LATERAL DO CARRINHO / PEDIDO -->
+    <!-- INCLUSÃO DOS MODAIS (REUTILIZÁVEIS EM TODAS AS PÁGINAS) -->
     <div id="cart-sidebar" class="fixed inset-0 z-50 hidden flex justify-end bg-royalDark-950/80 backdrop-blur-md">
-        <div class="w-full max-w-md h-full glass-panel border-l border-sapphire-500/40 p-6 flex flex-col justify-between shadow-2xl">
+        <div class="w-full max-w-md h-full glass-panel border-l border-sapphire-500/40 p-6 flex flex-col justify-between">
             <div class="space-y-4">
                 <div class="flex items-center justify-between border-b border-royalDark-800 pb-3">
-                    <h3 class="font-serif text-lg font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-wine-glass text-goldAccent-400"></i> Seu Pedido VIP
-                    </h3>
-                    <button onclick="toggleCartModal()" class="text-gray-400 hover:text-white">
-                        <i class="fa-solid fa-xmark text-lg"></i>
-                    </button>
+                    <h3 class="font-serif text-lg font-bold text-white">Seu Pedido VIP</h3>
+                    <button onclick="toggleCartModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
                 </div>
-                <div id="cart-items" class="max-h-[60vh] overflow-y-auto space-y-3 pr-1">
-                    <!-- Dynamic -->
-                </div>
+                <div id="cart-items" class="max-h-[60vh] overflow-y-auto space-y-3"></div>
             </div>
-
             <div class="space-y-4 border-t border-royalDark-800 pt-4">
                 <div class="flex justify-between items-center text-sm">
                     <span class="text-gray-300 font-semibold">Total do Pedido:</span>
                     <span id="cart-total-val" class="font-extrabold text-goldAccent-400 text-lg">R$ 0,00</span>
                 </div>
-                <button onclick="clearCart()" class="w-full py-3.5 rounded-full bg-gradient-to-r from-sapphire-600 to-sapphire-800 text-white font-bold text-xs uppercase tracking-wider hover:bg-sapphire-500 transition-all border border-goldAccent-500/40 shadow-lg">
-                    Confirmar & Enviar à Cozinha
-                </button>
+                <button onclick="clearCart()" class="w-full py-3.5 rounded-full bg-sapphire-600 text-white font-bold text-xs uppercase">Confirmar Pedido</button>
             </div>
         </div>
     </div>
 
-    <!-- MODAL DE DETALHES DO ITEM -->
-    <div id="item-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-royalDark-950/90 backdrop-blur-md">
-        <div class="glass-panel w-full max-w-md rounded-3xl overflow-hidden border border-sapphire-500/50 shadow-2xl p-6 space-y-4">
-            <div class="relative h-48 rounded-2xl overflow-hidden">
-                <img id="modal-img" src="" class="w-full h-full object-cover">
-            </div>
-            <div class="flex justify-between items-start">
-                <div>
-                    <span id="modal-tag" class="text-[9px] font-extrabold uppercase tracking-widest text-goldAccent-400"></span>
-                    <h3 id="modal-title" class="font-serif text-xl font-bold text-white mt-0.5"></h3>
-                </div>
-                <span id="modal-price" class="text-lg font-bold text-goldAccent-400"></span>
-            </div>
-            <p id="modal-desc" class="text-xs text-gray-300 leading-relaxed font-light"></p>
-            <div class="flex gap-2 pt-2">
-                <button onclick="closeModal('item-modal')" class="w-1/2 py-2.5 rounded-full bg-royalDark-900 border border-sapphire-500/30 text-xs font-bold text-gray-300 hover:bg-royalDark-800">Fechar</button>
-                <button onclick="addModalItemToCart()" class="w-1/2 py-2.5 rounded-full bg-sapphire-600 border border-goldAccent-500/30 text-xs font-bold text-white hover:bg-sapphire-500">Adicionar ao Pedido</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAINEL VIP DE GESTÃO (COM SENHA & HISTÓRICO DE PEDIDOS) -->
+    <!-- PAINEL VIP ADMIN -->
     <div id="admin-panel" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-royalDark-950/90 backdrop-blur-md">
-        <div class="glass-panel w-full max-w-3xl rounded-3xl p-6 border border-sapphire-500/50 space-y-5 shadow-2xl">
-            <div class="flex justify-between items-center pb-3 border-b border-royalDark-800">
-                <h3 class="font-serif text-lg font-bold text-goldAccent-400 flex items-center gap-2">
-                    <i class="fa-solid fa-chart-line text-sapphire-400"></i> Painel VIP • Relatório Diário de Operações
-                </h3>
-                <button onclick="toggleAdminPanel()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+        <div class="glass-panel w-full max-w-3xl rounded-3xl p-6 border border-sapphire-500/50 space-y-5">
+            <div class="flex justify-between items-center border-b border-royalDark-800 pb-3">
+                <h3 class="font-serif text-lg font-bold text-goldAccent-400">Painel VIP • Relatório Diário</h3>
+                <button onclick="toggleAdminPanel()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            
-            <!-- Cards de Métricas Expandidos -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                 <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-sapphire-500/30">
-                    <span class="text-[10px] text-gray-400 uppercase font-semibold block">Total Faturado</span>
+                    <span class="text-[10px] text-gray-400 block uppercase">Total Faturado</span>
                     <h4 id="admin-sales" class="text-xl font-bold text-goldAccent-400 mt-1">R$ 0,00</h4>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-sapphire-500/30">
-                    <span class="text-[10px] text-gray-400 uppercase font-semibold block">Total de Pedidos</span>
+                    <span class="text-[10px] text-gray-400 block uppercase">Total Pedidos</span>
                     <h4 id="admin-count" class="text-xl font-bold text-white mt-1">0</h4>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-emerald-500/30">
-                    <span class="text-[10px] text-emerald-400 uppercase font-semibold block">Prato + Pedido 🔥</span>
-                    <h4 id="admin-most-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum ainda</h4>
+                    <span class="text-[10px] text-emerald-400 block uppercase">Mais Pedido 🔥</span>
+                    <h4 id="admin-most-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum</h4>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-amber-500/30">
-                    <span class="text-[10px] text-amber-400 uppercase font-semibold block">Prato - Pedido ❄️</span>
-                    <h4 id="admin-least-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum ainda</h4>
+                    <span class="text-[10px] text-amber-400 block uppercase">Menos Pedido ❄️</span>
+                    <h4 id="admin-least-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum</h4>
                 </div>
             </div>
-
-            <!-- Histórico de Pedidos Recebidos Detalhado -->
-            <div class="space-y-2 pt-1">
-                <h4 class="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
-                    <i class="fa-solid fa-receipt text-sapphire-400"></i> Detalhamento Completo de Pedidos em Tempo Real
-                </h4>
-                <div id="admin-orders-list" class="max-h-72 overflow-y-auto space-y-2.5 pr-1">
-                    <p class="text-xs text-gray-400 text-center py-6">Nenhum pedido efetuado nesta sessão ainda.</p>
-                </div>
+            <div class="space-y-2">
+                <h4 class="text-xs font-bold text-gray-300 uppercase">Detalhamento de Pedidos em Tempo Real</h4>
+                <div id="admin-orders-list" class="max-h-64 overflow-y-auto space-y-2"></div>
             </div>
-
             <div class="pt-2 flex justify-between items-center border-t border-royalDark-800">
-                <span class="text-[11px] text-gray-400 font-light">Sessão protegida por criptografia de dados local</span>
-                <button onclick="lockAdminPanel()" class="px-4 py-2 rounded-xl bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold hover:bg-red-500 hover:text-white transition-all flex items-center gap-1.5">
-                    <i class="fa-solid fa-lock"></i> Bloquear / Sair
-                </button>
+                <button onclick="lockAdminPanel()" class="px-4 py-2 rounded-xl bg-red-500/20 text-red-400 text-xs font-bold">Bloquear / Sair</button>
             </div>
         </div>
     </div>
 
-    <!-- MODAL DE DIGITAÇÃO DE SENHA DO ADMIN -->
+    <!-- MODAL SENHA ADMIN -->
     <div id="password-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-royalDark-950/90 backdrop-blur-md">
-        <div class="glass-panel w-full max-w-sm rounded-3xl p-6 border border-goldAccent-500/40 text-center space-y-4 shadow-2xl">
-            <div class="w-12 h-12 rounded-full bg-royalDark-900 border border-goldAccent-400 flex items-center justify-center mx-auto text-goldAccent-400 text-xl">
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div>
-                <h3 class="font-serif text-lg font-bold text-white">Acesso Administrativo</h3>
-                <p class="text-xs text-gray-400 mt-1">Digite a senha para acessar o painel de vendas e pedidos.</p>
-                <span class="inline-block mt-1 text-[10px] text-sapphire-400 font-mono bg-sapphire-500/10 px-2 py-0.5 rounded border border-sapphire-500/20">Dica Demo: 1234</span>
-            </div>
+        <div class="glass-panel w-full max-w-sm rounded-3xl p-6 border border-goldAccent-500/40 text-center space-y-4">
+            <h3 class="font-serif text-lg font-bold text-white">Acesso Administrativo</h3>
             <form onsubmit="verifyAdminPassword(event)" class="space-y-3">
-                <input type="password" id="admin-pass-input" required placeholder="Digite a senha..." class="w-full bg-royalDark-950 border border-sapphire-500/40 rounded-xl px-4 py-2.5 text-center text-sm text-white focus:outline-none focus:border-goldAccent-400">
+                <input type="password" id="admin-pass-input" required placeholder="Digite a senha..." class="w-full bg-royalDark-950 border border-sapphire-500/40 rounded-xl px-4 py-2.5 text-center text-sm text-white">
                 <div class="flex gap-2">
-                    <button type="button" onclick="closeModal('password-modal')" class="w-1/2 py-2.5 rounded-xl bg-royalDark-800 text-gray-300 text-xs font-bold hover:bg-royalDark-700">Cancelar</button>
-                    <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-sapphire-600 border border-goldAccent-500/40 text-white text-xs font-bold hover:bg-sapphire-500">Acessar</button>
+                    <button type="button" onclick="closeModal('password-modal')" class="w-1/2 py-2.5 rounded-xl bg-royalDark-800 text-gray-300 text-xs font-bold">Cancelar</button>
+                    <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-sapphire-600 text-white text-xs font-bold">Acessar</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 hidden glass-panel px-5 py-3 rounded-2xl border border-goldAccent-400 text-xs font-semibold text-white shadow-xl"></div>
-
-    <script>
-        // EXPANDED GOURMET MENU DATA
-        const MENU = [
-            // GASTRONOMIA / ENTRADAS NOBRES & PRATOS PRINCIPAIS
-            { id: 1, title: "Tornedor Wagyu A5 ao Poivre Nobre", cat: "eats", tag: "Especialidade do Chef", price: 185.00, img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80", desc: "Corte nobre de Wagyu A5 selado na crosta de pimentas selecionadas, demiglace ao cognac e mousseline leve de batata trufada." },
-            { id: 2, title: "Canapés de Caviar Beluga & Blinis", cat: "eats", tag: "Exclusivo", price: 210.00, img: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80", desc: "Caviar Beluga sobre blinis aquecidos, creme de fraîche refinado, ciboulette picada e lascas de lâmina de ouro 24k." },
-            { id: 3, title: "Bisque de Lagosta com Açafrão Real", cat: "eats", tag: "Culinária Francesa", price: 145.00, img: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80", desc: "Sopa aveludada de lagosta grelhada com estigmas de açafrão do Irã, finalizada com emulsão de ervas finas e crostini de sourdough." },
-            { id: 4, title: "Risoto de Cavaquinha & Trufas Negras", cat: "eats", tag: "Autoral", price: 165.00, img: "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80", desc: "Arroz arbóreo italiano com medalhões de cavaquinha, manteiga noisette e lâminas fressas de trufa negra de Alba." },
-            { id: 5, title: "Ceviche de Robalo em Leite de Tigre Azul", cat: "eats", tag: "Mixologia Gastronômica", price: 88.00, img: "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=600&q=80", desc: "Robalo selvagem marinado em infusão cítrica natural de flor de fada, abacate macerado, milho crocante e pimenta rosa." },
-            { id: 6, title: "Tapas de Cogumelos Eringui Trufados", cat: "eats", tag: "Vegetariano Gourmet", price: 72.00, img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80", desc: "Cogumelos silvestres e eringui grelhados no azeite extravirgem trufado, servidos sobre broa artesanal tostada ao alho confit." },
-            { id: 7, title: "Carpaccio de Polvo ao Molho Cítrico", cat: "eats", tag: "Frutos do Mar", price: 95.00, img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80", desc: "Lâminas ultrafinas de polvo grelhado, alcaparras crocantes, flor de sal e azeite verde de manjericão." },
-
-            // MIXOLOGIA & ELIXIRES SAFIRA
-            { id: 8, title: "Elixir Safira Dourado Pitufos", cat: "drinks", tag: "Assinatura da Casa", price: 58.00, img: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80", desc: "Gin botânico safira, água tônica artesanal de flor de sabugueiro, licor de mirtilo e brilho comestível mineral." },
-            { id: 9, title: "Smoked Bourbon Old Fashioned", cat: "drinks", tag: "Defumado na Mesa", price: 65.00, img: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80", desc: "Bourbon maturado em carvalho, bitters aromáticos de especiarias e névoa defumada de madeira de macieira sob campânula." },
-            { id: 10, title: "Smurfberry Royale Molecular", cat: "drinks", tag: "Molecular", price: 52.00, img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80", desc: "Vodka premium com infusão artesanal de amora silvestre, licor de cassis e esfera molecular expansiva de limão siciliano." },
-            { id: 11, title: "Coquetel Lumina Botânico 24k", cat: "drinks", tag: "Premium", price: 68.00, img: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80", desc: "Tequila reposado, licor St. Germain, tônica artesanal e flocos flutuantes de ouro puro comestível." },
-            { id: 12, title: "Infusão Mística de Ervas (Zero Álcool)", cat: "drinks", tag: "Mocktail", price: 38.00, img: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80", desc: "Néctar de tangerina fresca, chá de borboleta azul, xarope caseiro de gengibre e espuma suave de capim-santo." },
-
-            // SOBREMESAS AUTORAIS
-            { id: 13, title: "Esfera Belgacom & Gelato de Baunilha Bourbon", cat: "desserts", tag: "Sobremesa Assinada", price: 55.00, img: "https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80", desc: "Esfera de chocolate belga 70% recheada com gelato artesanal de baunilha Bourbon, servida com calda quente de avelã." },
-            { id: 14, title: "Soufflé Quente de Pistache Siciliano", cat: "desserts", tag: "Culinária Doce", price: 52.00, img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80", desc: "Soufflé aerado de pistache de Bronte, acompanhado de sorbet de limão e crocante de praliné." },
-            { id: 15, title: "Velvet Azul Papa's Haute", cat: "desserts", tag: "Exclusivo", price: 46.00, img: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80", desc: "Bolo aveludado de amêndoas com creme levemente cítrico de mascarpone e merengue italiano maçaricado." },
-            { id: 16, title: "Mille-Feuille de Baunilha & Macadâmia", cat: "desserts", tag: "Clássico", price: 44.00, img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80", desc: "Massa folhada caramelizada em camadas com mousseline de baunilha de Madagascar e macadâmias crocantes." }
-        ];
-
-        const CATS = [
-            { id: "all", name: "Cardápio Completo" },
-            { id: "eats", name: "Gastronomia & Entradas" },
-            { id: "drinks", name: "Mixologia & Elixires" },
-            { id: "desserts", name: "Sobremesas Haute" }
-        ];
-
-        // LÓGICA DO CALENDÁRIO VIP (LIMITE: 9 RESERVAS/DIA)
-        const MAX_RESERVATIONS_PER_DAY = 9;
-        const dailyReservations = {}; // Armazena contagem de reservas por data (YYYY-MM-DD)
-
-        let currentPage = "home";
-        let activeCat = "all";
-        let cart = [];
-        let selectedItem = null;
-        let totalSales = 0;
-        let ordersCount = 0;
-        let ordersHistory = [];
-        let isAdminAuthenticated = false;
-        const ADMIN_PASS = "1234";
-
-        window.onload = () => {
-            initSampleReservations();
-            renderTabs();
-            renderFeaturedHome();
-            renderMenu();
-            renderVIPCalendar();
-            updateNavigationUI();
-        };
-
-        // Popula o calendário com alguns dados simulados
-        function initSampleReservations() {
-            const today = new Date();
-            const formatStr = (d) => d.toISOString().split('T')[0];
-
-            // Simula contagens de reservas para os próximos dias
-            const d1 = new Date(today); d1.setDate(today.getDate() + 1);
-            const d2 = new Date(today); d2.setDate(today.getDate() + 2);
-            const d3 = new Date(today); d3.setDate(today.getDate() + 3);
-            const d4 = new Date(today); d4.setDate(today.getDate() + 4);
-
-            dailyReservations[formatStr(today)] = 2; // Livre
-            dailyReservations[formatStr(d1)] = 6;    // Vagas Poucas
-            dailyReservations[formatStr(d2)] = 9;    // Lotado
-            dailyReservations[formatStr(d3)] = 0;    // Sem reservas
-            dailyReservations[formatStr(d4)] = 9;    // Lotado
-        }
-
-        function goToVIPCalendar() {
-            navigateTo('reservations');
-            setTimeout(() => {
-                const calSection = document.getElementById('vip-calendar-section');
-                if (calSection) calSection.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
-        }
-
-        function renderVIPCalendar() {
-            const container = document.getElementById('calendar-grid-container');
-            if (!container) return;
-
-            container.innerHTML = '';
-            const today = new Date();
-
-            for (let i = 0; i < 7; i++) {
-                const dateObj = new Date(today);
-                dateObj.setDate(today.getDate() + i);
-
-                const dateStr = dateObj.toISOString().split('T')[0];
-                const dayName = dateObj.toLocaleDateString('pt-BR', { weekday: 'short' }).replace('.', '');
-                const dayNum = dateObj.getDate();
-                const monthName = dateObj.toLocaleDateString('pt-BR', { month: 'short' });
-
-                const count = dailyReservations[dateStr] || 0;
-                const isFull = count >= MAX_RESERVATIONS_PER_DAY;
-
-                let statusBadge = '';
-                let borderStyle = '';
-
-                if (isFull) {
-                    statusBadge = `<span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 text-[10px] font-bold border border-red-500/40">LOTADO (${count}/9)</span>`;
-                    borderStyle = 'border-red-500/40 bg-red-950/20 opacity-80';
-                } else if (count >= 4) {
-                    statusBadge = `<span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px] font-bold border border-amber-500/40">${count}/9 Vagas</span>`;
-                    borderStyle = 'border-amber-500/40 bg-amber-950/20';
-                } else if (count > 0) {
-                    statusBadge = `<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold border border-emerald-500/40">${count}/9 Vagas</span>`;
-                    borderStyle = 'border-emerald-500/40 bg-emerald-950/20';
-                } else {
-                    statusBadge = `<span class="px-2 py-0.5 rounded bg-sapphire-500/20 text-sapphire-300 text-[10px] font-bold border border-sapphire-500/30">100% Livre (0/9)</span>`;
-                    borderStyle = 'border-sapphire-500/30 bg-royalDark-950/60';
-                }
-
-                container.innerHTML += `
-                    <div class="glass-card p-3 rounded-2xl border text-center space-y-2 flex flex-col justify-between items-center transition-all ${borderStyle}">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400">${dayName}</span>
-                        <div>
-                            <span class="text-lg font-serif font-extrabold text-white block">${dayNum}</span>
-                            <span class="text-[10px] uppercase text-gray-400 font-semibold">${monthName}</span>
-                        </div>
-                        ${statusBadge}
-                        <button ${isFull ? 'disabled' : ''} onclick="selectCalendarDate('${dateStr}')" class="w-full mt-1 py-1.5 rounded-xl text-[11px] font-bold transition-all ${isFull ? 'bg-royalDark-900 text-gray-600 cursor-not-allowed border border-gray-800' : 'bg-sapphire-600 text-white hover:bg-sapphire-500 border border-goldAccent-500/40'}">
-                            ${isFull ? 'Esgotado' : 'Reservar'}
-                        </button>
-                    </div>
-                `;
-            }
-        }
-
-        function selectCalendarDate(dateStr) {
-            const input = document.getElementById('reservation-date-input');
-            if (input) {
-                input.value = dateStr;
-                document.getElementById('reservation-form-container').scrollIntoView({ behavior: 'smooth' });
-                showToast(`Data ${dateStr} selecionada no formulário.`);
-            }
-        }
-
-        // Roteamento de 5 Páginas
-        function navigateTo(pageId) {
-            currentPage = pageId;
-            const pages = ['home', 'menu', 'about', 'events', 'reservations'];
-            
-            pages.forEach(p => {
-                const el = document.getElementById(`page-${p}`);
-                if (el) {
-                    if (p === pageId) {
-                        el.classList.remove('hidden');
-                    } else {
-                        el.classList.add('hidden');
-                    }
-                }
-            });
-
-            updateNavigationUI();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function updateNavigationUI() {
-            const pages = ['home', 'menu', 'about', 'events', 'reservations'];
-            pages.forEach(p => {
-                const btn = document.getElementById(`nav-${p}`);
-                if (btn) {
-                    if (p === currentPage) {
-                        btn.className = "nav-btn px-4 py-2 rounded-full text-goldAccent-400 bg-sapphire-600/30 border border-goldAccent-500/40 font-bold transition-all shadow-md";
-                    } else {
-                        btn.className = "nav-btn px-4 py-2 rounded-full text-gray-300 hover:text-white transition-all";
-                    }
-                }
-            });
-        }
-
-        function renderTabs() {
-            document.getElementById('category-tabs').innerHTML = CATS.map(c => {
-                const count = c.id === 'all' ? MENU.length : MENU.filter(i => i.cat === c.id).length;
-                return `
-                <button onclick="setCat('${c.id}')" class="px-4 py-2 rounded-full text-xs font-semibold transition-all whitespace-nowrap flex items-center gap-2 ${activeCat === c.id ? 'bg-sapphire-600 text-white font-bold shadow-md border border-goldAccent-500/40' : 'bg-royalDark-950/80 text-gray-300 hover:bg-royalDark-800'}">
-                    <span>${c.name}</span>
-                    <span class="px-1.5 py-0.5 rounded-full text-[10px] ${activeCat === c.id ? 'bg-royalDark-950 text-goldAccent-400 font-bold' : 'bg-royalDark-900 text-sapphire-400'}">${count}</span>
-                </button>
-            `}).join('');
-        }
-
-        function setCat(id) {
-            activeCat = id;
-            renderTabs();
-            renderMenu();
-        }
-
-        function renderFeaturedHome() {
-            const featured = [MENU[0], MENU[1], MENU[3], MENU[7], MENU[8], MENU[12]];
-            document.getElementById('home-featured-grid').innerHTML = featured.map(i => `
-                <div class="glass-card rounded-2xl overflow-hidden p-4 space-y-3 flex flex-col justify-between group border border-sapphire-500/20">
-                    <div class="relative overflow-hidden rounded-xl h-48">
-                        <img src="${i.img}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-royalDark-950/80 backdrop-blur-md text-[9px] font-bold text-goldAccent-400 border border-goldAccent-500/30 uppercase tracking-wider">${i.tag}</span>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-serif font-bold text-white text-base">${i.title}</h4>
-                        <p class="text-xs text-gray-300 font-light line-clamp-2">${i.desc}</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-2 border-t border-royalDark-800">
-                        <span class="font-bold text-goldAccent-400 text-sm">R$ ${i.price.toFixed(2)}</span>
-                        <div class="flex items-center gap-2">
-                            <button onclick="addToCartDirect(${i.id})" class="p-2 rounded-lg bg-sapphire-600/30 text-goldAccent-400 hover:bg-sapphire-600 hover:text-white transition-all">
-                                <i class="fa-solid fa-plus text-xs"></i>
-                            </button>
-                            <button onclick="openModal(${i.id})" class="px-3 py-1.5 rounded-lg bg-royalDark-950 text-gray-200 text-xs font-semibold hover:bg-royalDark-800 transition-all border border-sapphire-500/30">Detalhes</button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function renderMenu() {
-            const searchInput = document.getElementById('search-input');
-            const sortSelect = document.getElementById('sort-select');
-            
-            const search = searchInput ? searchInput.value.toLowerCase() : '';
-            const sort = sortSelect ? sortSelect.value : 'popular';
-
-            let items = MENU.filter(i => (activeCat === 'all' || i.cat === activeCat) && (i.title.toLowerCase().includes(search) || i.desc.toLowerCase().includes(search) || i.tag.toLowerCase().includes(search)));
-
-            if (sort === 'price-asc') items.sort((a,b) => a.price - b.price);
-            if (sort === 'price-desc') items.sort((a,b) => b.price - a.price);
-
-            const grid = document.getElementById('menu-grid');
-            if (!grid) return;
-
-            if (items.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full text-center py-12 space-y-2 glass-card rounded-2xl">
-                        <i class="fa-solid fa-utensils text-2xl text-gray-500"></i>
-                        <p class="text-xs text-gray-400 font-semibold">Nenhum item gourmet encontrado para a pesquisa.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            grid.innerHTML = items.map(i => `
-                <div class="glass-card rounded-2xl overflow-hidden p-4 space-y-3 flex flex-col justify-between group border border-sapphire-500/20">
-                    <div class="relative overflow-hidden rounded-xl h-48">
-                        <img src="${i.img}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-royalDark-950/80 backdrop-blur-md text-[9px] font-bold text-goldAccent-400 border border-goldAccent-500/30 uppercase tracking-wider">${i.tag}</span>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-serif font-bold text-white text-base">${i.title}</h4>
-                        <p class="text-xs text-gray-300 font-light line-clamp-2">${i.desc}</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-2 border-t border-royalDark-800">
-                        <span class="font-bold text-goldAccent-400 text-base">R$ ${i.price.toFixed(2)}</span>
-                        <div class="flex items-center gap-2">
-                            <button onclick="addToCartDirect(${i.id})" class="px-3 py-1.5 rounded-full bg-sapphire-600 border border-goldAccent-500/30 text-white text-xs font-bold hover:bg-sapphire-500 transition-all flex items-center gap-1 shadow-sm">
-                                <i class="fa-solid fa-plus text-[10px]"></i> Pedir
-                            </button>
-                            <button onclick="openModal(${i.id})" class="p-2 rounded-full bg-royalDark-950 text-gray-300 hover:bg-royalDark-800 transition-all border border-sapphire-500/20">
-                                <i class="fa-solid fa-eye text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function openModal(id) {
-            selectedItem = MENU.find(i => i.id === id);
-            if (!selectedItem) return;
-
-            document.getElementById('modal-tag').innerText = selectedItem.tag;
-            document.getElementById('modal-title').innerText = selectedItem.title;
-            document.getElementById('modal-img').src = selectedItem.img;
-            document.getElementById('modal-desc').innerText = selectedItem.desc;
-            document.getElementById('modal-price').innerText = `R$ ${selectedItem.price.toFixed(2)}`;
-            document.getElementById('item-modal').classList.remove('hidden');
-        }
-
-        function closeModal(id) {
-            const modal = document.getElementById(id);
-            if (modal) modal.classList.add('hidden');
-        }
-
-        function addToCartDirect(id) {
-            const item = MENU.find(i => i.id === id);
-            if (!item) return;
-
-            const existing = cart.find(c => c.id === item.id);
-            if (existing) {
-                existing.qty = (existing.qty || 1) + 1;
-            } else {
-                cart.push({ ...item, qty: 1 });
-            }
-            updateCart();
-            showToast(`${item.title} adicionado ao pedido!`);
-        }
-
-        function addModalItemToCart() {
-            if (selectedItem) {
-                addToCartDirect(selectedItem.id);
-                closeModal('item-modal');
-            }
-        }
-
-        function changeCartQty(id, delta) {
-            const index = cart.findIndex(i => i.id === id);
-            if (index !== -1) {
-                cart[index].qty = (cart[index].qty || 1) + delta;
-                if (cart[index].qty <= 0) {
-                    cart.splice(index, 1);
-                }
-                updateCart();
-            }
-        }
-
-        function toggleCartModal() {
-            document.getElementById('cart-sidebar').classList.toggle('hidden');
-        }
-
-        function updateCart() {
-            const totalQty = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
-            document.getElementById('cart-badge-count').innerText = totalQty;
-            const container = document.getElementById('cart-items');
-
-            if (cart.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-12 space-y-2 text-gray-400">
-                        <i class="fa-solid fa-wine-glass text-2xl text-sapphire-400"></i>
-                        <p class="text-xs font-semibold">Seu pedido VIP está vazio.</p>
-                    </div>
-                `;
-            } else {
-                container.innerHTML = cart.map(item => `
-                    <div class="flex items-center justify-between p-3 rounded-xl bg-royalDark-950 border border-sapphire-500/20 text-xs text-white">
-                        <div class="space-y-0.5 max-w-[150px]">
-                            <p class="font-bold truncate">${item.title}</p>
-                            <p class="text-goldAccent-400 font-bold text-[11px]">R$ ${(item.price * (item.qty || 1)).toFixed(2)}</p>
-                        </div>
-                        <div class="flex items-center gap-2 bg-royalDark-900 px-2 py-1 rounded-lg border border-sapphire-500/30">
-                            <button onclick="changeCartQty(${item.id}, -1)" class="text-gray-400 hover:text-white px-1 font-bold">-</button>
-                            <span class="text-xs font-bold text-goldAccent-400 w-4 text-center">${item.qty || 1}</span>
-                            <button onclick="changeCartQty(${item.id}, 1)" class="text-gray-400 hover:text-white px-1 font-bold">+</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            const total = cart.reduce((s, i) => s + (i.price * (i.qty || 1)), 0);
-            document.getElementById('cart-total-val').innerText = `R$ ${total.toFixed(2)}`;
-        }
-
-        function clearCart() {
-            if (cart.length === 0) {
-                showToast("Adicione ao menos um item para confirmar.");
-                return;
-            }
-            const totalOrder = cart.reduce((s, i) => s + (i.price * (i.qty || 1)), 0);
-            totalSales += totalOrder;
-            ordersCount++;
-            
-            const newOrder = {
-                id: `#PF-${Math.floor(1000 + Math.random() * 9000)}`,
-                time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
-                items: [...cart],
-                total: totalOrder
-            };
-            ordersHistory.unshift(newOrder);
-
-            cart = [];
-            updateCart();
-            toggleCartModal();
-            showToast("Pedido confirmado e enviado à cozinha do chef!");
-        }
+    <script src="app.js"></script>
+</body>
+</html>
