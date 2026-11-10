@@ -1,33 +1,184 @@
-   <!-- ================= PAGE 5: RESERVAS VIP ================= -->
-        <div id="page-reservations" class="page-view hidden max-w-4xl mx-auto space-y-10 py-4">
-            
-            <!-- CALENDÁRIO VIP DE DISPONIBILIDADE -->
-            <div id="vip-calendar-section" class="glass-panel p-6 sm:p-8 rounded-3xl border border-sapphire-500/40 space-y-6 shadow-2xl">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-royalDark-800 pb-4">
-                    <div>
-                        <span class="text-[10px] font-bold text-goldAccent-400 uppercase tracking-widest bg-sapphire-500/20 px-3 py-1 rounded-full border border-goldAccent-500/30">
-                            Capacidade Estrita: Máximo 9 Reservas / Dia
-                        </span>
-                        <h3 class="text-2xl font-serif font-bold text-white mt-2">Calendário de Disponibilidade VIP</h3>
-                        <p class="text-xs text-gray-400">Selecione um dia disponível para preencher seu agendamento no salão.</p>
-                    </div>
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa's Pitufos | Reservas VIP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        royalDark: { 950: '#030712', 900: '#0B132B', 800: '#1C2541', 700: '#2A365B' },
+                        champagne: { 100: '#FAF8F5', 200: '#F3EDE2', 300: '#E7DC8A', 400: '#D2C1A0' },
+                        goldAccent: { 300: '#F7E7A9', 400: '#E5C158', 500: '#D4AF37', 600: '#B89228' },
+                        sapphire: { 300: '#93C5FD', 400: '#60A5FA', 500: '#2563EB', 600: '#1D4ED8', 800: '#1E3A8A', 900: '#0F172A' }
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], serif: ['Cinzel', 'Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: #F3EDE2; }
+        .glass-panel { background: rgba(11, 19, 43, 0.88); backdrop-filter: blur(20px); border: 1px solid rgba(37, 99, 235, 0.25); }
+        .glass-card { background: rgba(28, 37, 65, 0.55); backdrop-filter: blur(14px); border: 1px solid rgba(212, 175, 55, 0.15); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-royalDark-950">
 
-                    <!-- Legendas de Status -->
-                    <div class="flex flex-wrap items-center gap-2 text-[11px]">
-                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-semibold flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Livre (0-3)
-                        </span>
-                        <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30 font-semibold flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Vagas Poucas (4-8)
-                        </span>
-                        <span class="px-2.5 py-1 rounded-lg bg-red-500/10 text-red-400 border border-red-500/30 font-semibold flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-red-400"></span> Lotado (9/9)
-                        </span>
-                    </div>
+    <header class="sticky top-0 z-40 glass-panel border-b border-sapphire-500/30 px-4 lg:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full border border-goldAccent-500/40 flex items-center justify-center bg-royalDark-900 shadow-lg">
+                    <i class="fa-solid fa-crown text-goldAccent-400 text-base"></i>
                 </div>
+                <div>
+                    <h1 class="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase">Papa's Pitufos</h1>
+                    <p class="text-[9px] text-sapphire-400 tracking-[0.25em] uppercase font-semibold">Haute Cuisine & Sapphire Lounge</p>
+                </div>
+            </a>
 
-                <!-- Grid de Vagas -->
-                <div id="calendar-grid-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
-                    <!-- Dynamic Javascript Calendar -->
+            <nav class="hidden md:flex items-center gap-1 bg-royalDark-950/90 p-1.5 rounded-full border border-sapphire-500/30 text-xs font-medium">
+                <a href="index.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Início</a>
+                <a href="cardapio.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Cardápio</a>
+                <a href="alquimia.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">A Alquimia</a>
+                <a href="experiencias.html" class="px-4 py-2 rounded-full text-gray-300 hover:text-white">Experiências</a>
+                <a href="reservas.html" class="px-4 py-2 rounded-full text-goldAccent-400 bg-sapphire-600/30 border border-goldAccent-500/40 font-bold">Reservas VIP</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <button onclick="requestAdminAccess()" class="p-2.5 rounded-full bg-royalDark-800 text-sapphire-400 border border-sapphire-500/30 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-goldAccent-400"></i><span class="hidden sm:inline font-semibold">Painel VIP</span>
+                </button>
+                <button onclick="toggleCartModal()" class="px-4 py-2.5 rounded-full bg-sapphire-600 text-white font-bold text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-wine-glass text-goldAccent-400"></i><span class="hidden sm:inline">Pedido</span>
+                    <span id="cart-badge-count" class="px-2 py-0.5 rounded-full bg-royalDark-950 text-goldAccent-400 text-[10px]">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+        <!-- CALENDÁRIO VIP -->
+        <div id="vip-calendar-section" class="glass-panel p-6 sm:p-8 rounded-3xl border border-sapphire-500/40 space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-royalDark-800 pb-4">
+                <div>
+                    <span class="text-[10px] font-bold text-goldAccent-400 uppercase tracking-widest bg-sapphire-500/20 px-3 py-1 rounded-full border border-goldAccent-500/30">Capacidade Estrita: Máximo 9 Reservas / Dia</span>
+                    <h3 class="text-2xl font-serif font-bold text-white mt-2">Calendário de Disponibilidade VIP</h3>
+                    <p class="text-xs text-gray-400">Selecione um dia disponível para preencher seu agendamento no salão.</p>
                 </div>
             </div>
+            <div id="calendar-grid-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3"></div>
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <div id="reservation-form-container" class="glass-panel p-8 sm:p-12 rounded-3xl border border-sapphire-500/40 space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-goldAccent-400 bg-sapphire-500/20 px-4 py-1.5 rounded-full border border-goldAccent-500/30">Atendimento Preferencial VIP</span>
+                <h2 class="text-3xl font-serif font-bold text-white">Reserva de Mesas & Lounges</h2>
+            </div>
+            <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="space-y-4 pt-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-[11px] font-bold text-gray-300 uppercase block mb-1">Nome Completo</label>
+                        <input type="text" required placeholder="Seu nome" class="w-full bg-royalDark-950 border border-sapphire-500/30 rounded-xl px-4 py-3 text-xs text-white">
+                    </div>
+                    <div>
+                        <label class="text-[11px] font-bold text-gray-300 uppercase block mb-1">Telefone / WhatsApp</label>
+                        <input type="tel" required placeholder="(11) 99999-9999" class="w-full bg-royalDark-950 border border-sapphire-500/30 rounded-xl px-4 py-3 text-xs text-white">
+                    </div>
+                    <div>
+                        <label class="text-[11px] font-bold text-gray-300 uppercase block mb-1">Data Desejada</label>
+                        <input type="date" id="reservation-date-input" required class="w-full bg-royalDark-950 border border-sapphire-500/30 rounded-xl px-4 py-3 text-xs text-white">
+                    </div>
+                    <div>
+                        <label class="text-[11px] font-bold text-gray-300 uppercase block mb-1">Ambiente Desejado</label>
+                        <select required class="w-full bg-royalDark-950 border border-sapphire-500/30 rounded-xl px-4 py-3 text-xs text-white">
+                            <option value="balcao">Balcão do Alquimista (1-2 Pessoas)</option>
+                            <option value="salao">Mesa Salão Safira (2-4 Pessoas)</option>
+                            <option value="lounge">Sofa Lounge Imperial (4-6 Pessoas)</option>
+                            <option value="vip">Camarote Privativo VIP (6+ Pessoas)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-sapphire-600 text-white font-bold text-xs uppercase tracking-wider">Solicitar Confirmação de Reserva VIP</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- INCLUSÃO MODAIS COMPARTILHADOS -->
+    <div id="cart-sidebar" class="fixed inset-0 z-50 hidden flex justify-end bg-royalDark-950/80 backdrop-blur-md">
+        <div class="w-full max-w-md h-full glass-panel border-l border-sapphire-500/40 p-6 flex flex-col justify-between">
+            <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-royalDark-800 pb-3">
+                    <h3 class="font-serif text-lg font-bold text-white">Seu Pedido VIP</h3>
+                    <button onclick="toggleCartModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                </div>
+                <div id="cart-items" class="max-h-[60vh] overflow-y-auto space-y-3"></div>
+            </div>
+            <div class="space-y-4 border-t border-royalDark-800 pt-4">
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-300 font-semibold">Total do Pedido:</span>
+                    <span id="cart-total-val" class="font-extrabold text-goldAccent-400 text-lg">R$ 0,00</span>
+                </div>
+                <button onclick="clearCart()" class="w-full py-3.5 rounded-full bg-sapphire-600 text-white font-bold text-xs uppercase">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-panel" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-royalDark-950/90 backdrop-blur-md">
+        <div class="glass-panel w-full max-w-3xl rounded-3xl p-6 border border-sapphire-500/50 space-y-5">
+            <div class="flex justify-between items-center border-b border-royalDark-800 pb-3">
+                <h3 class="font-serif text-lg font-bold text-goldAccent-400">Painel VIP • Relatório Diário</h3>
+                <button onclick="toggleAdminPanel()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-sapphire-500/30">
+                    <span class="text-[10px] text-gray-400 block uppercase">Total Faturado</span>
+                    <h4 id="admin-sales" class="text-xl font-bold text-goldAccent-400 mt-1">R$ 0,00</h4>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-sapphire-500/30">
+                    <span class="text-[10px] text-gray-400 block uppercase">Total Pedidos</span>
+                    <h4 id="admin-count" class="text-xl font-bold text-white mt-1">0</h4>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-emerald-500/30">
+                    <span class="text-[10px] text-emerald-400 block uppercase">Mais Pedido 🔥</span>
+                    <h4 id="admin-most-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum</h4>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-royalDark-950/80 border border-amber-500/30">
+                    <span class="text-[10px] text-amber-400 block uppercase">Menos Pedido ❄️</span>
+                    <h4 id="admin-least-popular" class="text-xs font-bold text-white mt-1.5 truncate">Nenhum</h4>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <h4 class="text-xs font-bold text-gray-300 uppercase">Detalhamento de Pedidos</h4>
+                <div id="admin-orders-list" class="max-h-64 overflow-y-auto space-y-2"></div>
+            </div>
+            <div class="pt-2 flex justify-between items-center border-t border-royalDark-800">
+                <button onclick="lockAdminPanel()" class="px-4 py-2 rounded-xl bg-red-500/20 text-red-400 text-xs font-bold">Bloquear / Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="password-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-royalDark-950/90 backdrop-blur-md">
+        <div class="glass-panel w-full max-w-sm rounded-3xl p-6 border border-goldAccent-500/40 text-center space-y-4">
+            <h3 class="font-serif text-lg font-bold text-white">Acesso Administrativo</h3>
+            <form onsubmit="verifyAdminPassword(event)" class="space-y-3">
+                <input type="password" id="admin-pass-input" required placeholder="Digite a senha..." class="w-full bg-royalDark-950 border border-sapphire-500/40 rounded-xl px-4 py-2.5 text-center text-sm text-white">
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeModal('password-modal')" class="w-1/2 py-2.5 rounded-xl bg-royalDark-800 text-gray-300 text-xs font-bold">Cancelar</button>
+                    <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-sapphire-600 text-white text-xs font-bold">Acessar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden glass-panel px-5 py-3 rounded-2xl border border-goldAccent-400 text-xs font-semibold text-white shadow-xl"></div>
+    <script src="app.js"></script>
+</body>
+</html>
