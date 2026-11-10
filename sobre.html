@@ -1,34 +1,56 @@
-        <!-- ================= PAGE 3: SOBRE NÓS ================= -->
-        <div id="page-about" class="page-view hidden space-y-12">
-            <div class="text-center space-y-2">
-                <span class="text-xs font-bold uppercase tracking-widest text-sapphire-400 bg-sapphire-500/10 px-4 py-1.5 rounded-full border border-sapphire-500/20">
-                    História & Tradição Nobre
-                </span>
-                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Nossa Filosofia Gastronômica</h2>
-            </div>
+<!-- ================= PAGE 3: SOBRE NÓS (A ALQUIMIA) ================= -->
+<div id="page-about" class="page-view hidden space-y-16 py-6">
+    <!-- Cabeçalho da Seção -->
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-goldAccent-400 bg-goldAccent-500/10 px-4 py-1.5 rounded-full border border-goldAccent-500/20 shadow-sm">
+            História & Tradição Nobre
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">Nossa Filosofia Gastronômica</h2>
+        <p class="text-xs sm:text-sm text-gray-400 font-light">A perfeita harmonia entre a tradição clássica e a vanguarda molecular.</p>
+    </div>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <div class="aspect-video rounded-3xl overflow-hidden border border-sapphire-500/40 shadow-2xl sapphire-glow">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Ambiente Azul Safira do Restaurante Papa's Pitufos" class="w-full h-full object-cover">
+    <!-- Bloco Conteúdo Principal -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Moldura da Imagem -->
+        <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-sapphire-600 via-goldAccent-500/30 to-sapphire-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+            <div class="relative aspect-video rounded-3xl overflow-hidden border border-sapphire-500/40 shadow-2xl sapphire-glow">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Ambiente Azul Safira do Restaurante Papa's Pitufos" 
+                     class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- Descrição & Enredo -->
+        <div class="space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-semibold text-sapphire-400 uppercase tracking-widest">Exclusividade & Legado</span>
+                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">Sabor, Técnicas Moleculares & Pureza</h3>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed text-xs sm:text-sm font-light">
+                Criado para exigentes apreciadores do bom viver, o Papa's Pitufos unifica o rigor clássico da alta culinária europeia com toques de vanguarda e mixologia autoral em um ambiente envolvente banhado em tons azul safira imperial. Cada criação busca despertar memórias gustativas únicas através de ingredientes raros e apresentação impecável.
+            </p>
+
+            <!-- Grid de Destaques -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="glass-card p-4 rounded-2xl border-l-2 border-l-goldAccent-400 hover:border-goldAccent-300 transition-all">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="fa-solid fa-utensils text-goldAccent-400 text-xs"></i>
+                        <h4 class="font-bold text-white text-sm">Cozinha Autoral</h4>
                     </div>
+                    <p class="text-[11px] text-gray-400">Pratos assinados por mestres com foco em textura, equilíbrio e profundidade.</p>
                 </div>
 
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-serif font-bold text-white">Sabor, Técnica Moleculares & Pureza</h3>
-                    <p class="text-gray-300 leading-relaxed text-xs sm:text-sm font-light">
-                        Criado para exigentes apreciadores do bom viver, o Papa's Pitufos unifica o rigor clássico da culinária europeia com toques de vanguarda e mixologia autoral em um ambiente envolvente no tom azul safira imperial.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-2">
-                        <div class="glass-card p-4 rounded-2xl border-l-2 border-l-goldAccent-400">
-                            <h4 class="font-bold text-white text-sm">Cozinha Autoral</h4>
-                            <p class="text-[11px] text-gray-400 mt-1">Pratos assinados por mestres com foco em textura e profundidade.</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-2xl border-l-2 border-l-sapphire-400">
-                            <h4 class="font-bold text-white text-sm">Mixologia Safira</h4>
-                            <p class="text-[11px] text-gray-400 mt-1">Coquetéis moleculares com botânicos selvagens e esferificações.</p>
-                        </div>
+                <div class="glass-card p-4 rounded-2xl border-l-2 border-l-sapphire-400 hover:border-sapphire-300 transition-all">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="fa-solid fa-flask-vial text-sapphire-400 text-xs"></i>
+                        <h4 class="font-bold text-white text-sm">Mixologia Safira</h4>
                     </div>
+                    <p class="text-[11px] text-gray-400">Coquetéis moleculares com botânicos selvagens, infusões e esferificações.</p>
                 </div>
             </div>
         </div>
+    </div>
+</div>
